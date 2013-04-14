@@ -9,6 +9,9 @@
     <property name="war.name" value="${app.name}.war"/>
     <property name="lib.dir" value="lib"/>
     <property name="lib.compile.dir" value ="${lib.dir}/compile"/>
+    <property name="java.home" value="/usr/lib/jvm/java-6-openjdk-amd64"/>
+    <property environment="env"/>
+    <property name="env.JAVA_HOME" value="${java.home}"/>
     <condition property="tomcat.startup.executable"
                value="${tomcat.home}/bin/startup.bat"
                else="${tomcat.home}/bin/startup.sh">
