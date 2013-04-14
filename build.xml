@@ -7,6 +7,8 @@
     <property name="src.home" value="${basedir}/src"/>
     <property name="web.home" value="${basedir}/web"/>
     <property name="war.name" value="${app.name}.war"/>
+    <property name="lib.dir" value="lib"/>
+    <property name="lib.compile.dir" value ="${lib.dir}/compile"/>
     <condition property="tomcat.startup.executable"
                value="${tomcat.home}/bin/startup.bat"
                else="${tomcat.home}/bin/startup.sh">
@@ -28,11 +30,11 @@
 
     <!-- Define the CLASSPATH -->
     <path id="compile.classpath">
-        <fileset dir="${tomcat.home}/bin">
+        <fileset dir="${lib.compile.dir}/bin">
             <include name="*.jar"/>
         </fileset>
-        <pathelement location="${tomcat.home}/lib"/>
-        <fileset dir="${tomcat.home}/lib">
+        <pathelement location="${lib.compile.dir}/lib"/>
+        <fileset dir="${lib.compile.dir}/lib">
             <include name="*.jar"/>
         </fileset>
     </path>
