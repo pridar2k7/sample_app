@@ -30,11 +30,7 @@
 
     <!-- Define the CLASSPATH -->
     <path id="compile.classpath">
-        <fileset dir="${lib.dir}/bin">
-            <include name="*.jar"/>
-        </fileset>
-        <pathelement location="${lib.compile.dir}/lib"/>
-        <fileset dir="${lib.compile.dir}/lib">
+        <fileset dir="lib">
             <include name="*.jar"/>
         </fileset>
     </path>
