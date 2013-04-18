@@ -16,7 +16,7 @@
     </condition>
 
     <target name="help">
-        <echo>You can use the following targets :</echo>
+        <echo>You can use the following targets like:</echo>
         <echo></echo>
         <echo>help : (default) Prints this message</echo>
         <echo>all : Cleans, compiles, and packages application</echo>
